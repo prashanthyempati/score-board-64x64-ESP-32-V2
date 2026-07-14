@@ -1,7 +1,0 @@
-MD_MAX72XX
-MD_Parola
-ArduinoJson
-ESPAsyncWebServer
-AsyncTCP
-LittleFS
-ArduinoOTA
