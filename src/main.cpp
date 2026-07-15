@@ -5,11 +5,9 @@ Display display;
 
 void setup()
 {
-    Serial.begin(115200);
-
     display.begin();
 
-    display.printCenter("WELCOME");
+    display.printCenter("HELLO");
 }
 
 void loop()
