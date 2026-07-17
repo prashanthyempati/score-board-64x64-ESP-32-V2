@@ -12,6 +12,11 @@ void Display::clear()
     matrix.clear();
 }
 
+void Display::drawPixel(uint8_t x, uint8_t y, bool state)
+{
+    matrix.setPoint(y, x, state);
+}
+
 void Display::printCenter(const char *text)
 {
     matrix.clear();
