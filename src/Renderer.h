@@ -1,13 +1,13 @@
 #ifndef RENDERER_H
 #define RENDERER_H
 
-#include "Display.h"
+#include "Display64x64.h"
 #include "Scoreboard.h"
 
 class Renderer
 {
 public:
-    Renderer(Display &display);
+    Renderer(Display64x64 &display);
 
     void showScore(const Scoreboard &board);
     void showTarget(const Scoreboard &board);
@@ -16,7 +16,7 @@ public:
     void showBatter2(const Scoreboard &board);
 
 private:
-    Display &display;
+    Display64x64 &display;
 };
 
 #endif
