@@ -17,7 +17,7 @@ public:
     void render(const FrameBuffer &fb);
 
 private:
-    MD_MAX72XX* rows[ROWS];
+    MD_MAX72XX matrix;
 
     void renderRow(
         uint8_t rowChain,

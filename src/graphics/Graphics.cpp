@@ -1,4 +1,5 @@
 #include "Graphics.h"
+#include "fonts/Font5x7.h"
 
 Graphics::Graphics(FrameBuffer &fb)
     : frameBuffer(fb)
@@ -50,5 +51,37 @@ void Graphics::fillRect(int x, int y, int width, int height)
     for (int row = 0; row < height; row++)
     {
         drawHLine(x, y + row, width);
+    }
+}
+
+void Graphics::drawChar(int x, int y, char c)
+{
+    Glyph glyph = getGlyph(c);
+
+    if (glyph.bitmap == nullptr)
+        return;
+
+    for (uint8_t col = 0; col < glyph.width; col++)
+    {
+        uint8_t bits = glyph.bitmap[col];
+
+        for (uint8_t row = 0; row < glyph.height; row++)
+        {
+            bool pixel = (bits & (1 << row)) != 0;
+
+            drawPixel(x + col, y + row, pixel);
+        }
+    }
+}
+
+void Graphics::drawText(int x, int y, const char *text)
+{
+    while (*text)
+    {
+        drawChar(x, y, *text);
+
+        x += 6;   // 5 pixels + 1 pixel spacing
+
+        text++;
     }
 }

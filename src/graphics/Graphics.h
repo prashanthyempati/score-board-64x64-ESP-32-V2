@@ -19,6 +19,10 @@ public:
     void drawRect(int x, int y, int width, int height);
     void fillRect(int x, int y, int width, int height);
 
+    // Text rendering
+    void drawChar(int x, int y, char c);
+    void drawText(int x, int y, const char *text);
+
 private:
     FrameBuffer &frameBuffer;
 };

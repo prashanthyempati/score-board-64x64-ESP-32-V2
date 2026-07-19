@@ -2,6 +2,7 @@
   "version": 1,
   "author": "Prashanth",
   "editor": "wokwi",
+
   "parts": [
     {
       "type": "board-esp32-devkit-c-v4",
@@ -69,37 +70,38 @@
   ],
 
   "connections": [
+
     ["esp:23","row0:DIN","green"],
     ["esp:18","row0:CLK","blue"],
     ["esp:5","row0:CS","yellow"],
 
     ["esp:23","row1:DIN","green"],
     ["esp:18","row1:CLK","blue"],
-    ["esp:5","row1:CS","yellow"],
+    ["esp:17","row1:CS","yellow"],
 
     ["esp:23","row2:DIN","green"],
     ["esp:18","row2:CLK","blue"],
-    ["esp:5","row2:CS","yellow"],
+    ["esp:16","row2:CS","yellow"],
 
     ["esp:23","row3:DIN","green"],
     ["esp:18","row3:CLK","blue"],
-    ["esp:5","row3:CS","yellow"],
+    ["esp:4","row3:CS","yellow"],
 
     ["esp:23","row4:DIN","green"],
     ["esp:18","row4:CLK","blue"],
-    ["esp:5","row4:CS","yellow"],
+    ["esp:2","row4:CS","yellow"],
 
     ["esp:23","row5:DIN","green"],
     ["esp:18","row5:CLK","blue"],
-    ["esp:5","row5:CS","yellow"],
+    ["esp:15","row5:CS","yellow"],
 
     ["esp:23","row6:DIN","green"],
     ["esp:18","row6:CLK","blue"],
-    ["esp:5","row6:CS","yellow"],
+    ["esp:13","row6:CS","yellow"],
 
     ["esp:23","row7:DIN","green"],
     ["esp:18","row7:CLK","blue"],
-    ["esp:5","row7:CS","yellow"],
+    ["esp:12","row7:CS","yellow"],
 
     ["esp:5V","row0:VCC","red"],
     ["esp:5V","row1:VCC","red"],
